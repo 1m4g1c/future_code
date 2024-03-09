@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'blog/css/main.css' %}" rel="stylesheet">
+    <title>{{site_name}}</title>
+</head>
+
+
+
+<header>
+    <a href="/aboutme">About</a>
+    <hr>
+</header>
+<body>
+    
+    <h1>Hello django</h1>
+    {% for post in posts %}
+    <hr>
+    <h1>{{ post.heading }}</h1>
+    <p>{{ post.text }}</p>
+    <i>{{ post.created_at }} by {{ post.author }}</i>
+
+    {% endfor %}
+</body>
+</html>
