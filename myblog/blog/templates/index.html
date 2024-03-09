@@ -15,14 +15,28 @@
     <hr>
 </header>
 <body>
-    
-    <h1>Hello django</h1>
+    <div class="post">
+        <h1>Hello django</h1>
     {% for post in posts %}
     <hr>
     <h1>{{ post.heading }}</h1>
     <p>{{ post.text }}</p>
     <i>{{ post.created_at }} by {{ post.author }}</i>
+    </div>
+    
+    {% for comment in post.comment_set.all %}
+    <div class="comment">
+        <p>{{ comment.text }}</p>
+    </div>
+    {% endfor %}
 
+    <div class="comment">
+        <form action="/new_comment">
+            <input name="post_id" hidden value="{{ post.id }}"/>
+            <input name="text" />
+            <button>Отправить</button>
+        </form>
+    </div>
     {% endfor %}
 </body>
 </html>

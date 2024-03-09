@@ -1,8 +1,44 @@
-* {
-    color: #ff00ff;
-}
-
 body {
     background-image: url('../img/back.jpg');
     background-size: cover;
 }
+
+.post {
+    padding: 9px;
+    margin-top: 29px;
+    border-radius: 9px;
+    background-color: #ff00b35c;
+}
+
+.comment {
+    padding: 9px;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 30%;
+    border-radius: 9px;
+    background-color: #ff00b35c;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment input {
+    border-radius: 9px;
+    border: 0px;
+    background-color: #cfcece5c;
+    margin: 0;
+}
+
+.comment button {
+    border-radius: 9px;
+    border: 0px;
+    background-color: #cfcece5c;
+    margin: 0;
+}
+
